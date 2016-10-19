@@ -31,53 +31,42 @@ time, mark, audio, video {
 
 .container {
   width: 100%;
-  height: 200%;
+
 }
 /*EVERYTHING IN HEADER AREA INCLUDING NAV BAR */
 header  {
-  background-color: #B3BAB9;
+	display: block;
+	position: block;
+  background-color: #BCE5FA;
   width: 100%;
   margin-bottom: 2%;
-  border-bottom: 1px solid black;
+  border-bottom: 0.2em solid black;
 }
-
-header img {
-	max-width:50%;
-	max-height: auto;
-}
-
+/*Area where picture is located*/
 .logo {
-  display: inline-block;
-  border: 5px solid red;
-  width: 15%;
-  vertical-align: top;
-  float: left;
-}
-
-h1 {
-  font-size: 3em;
-}
-
-.headright {
-  width: 76%;
-  height:auto;
-  display: inline-block;
-  border: 5px solid purple;
-}
-
-nav {
-  border: 5px solid green;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
   display: block;
-  float: left;
-  vertical-align: middle;
+  width: 100%;
 }
+/* logo image*/
+header img {
+	width:20%;
+	height: auto;
+	display: block;
+	margin:auto;
+	padding: 1%;
+}
+
+
+
+nav {				/*NavBar*/
+	display: block;
+	text-align: center;
+	padding-bottom: 2%;
+}
+
 nav .cell {
-  width: 32%;
+  width: 32.4%;
   text-align: center;
-  border: 1px solid black;
 }
 
 #mainNav ul * {
@@ -88,15 +77,19 @@ nav .cell {
 }
 
 
-
-
 /*FEATURE IMAGE*/
 
+@keyframes fade {
+	0% {opacity: 0.1;}
+	25% {opacity: 0.25;}
+	50% {opacity: 0.5;}
+	75% {opacity: 0.75;}
+	100% {opacity: 1;}
+}
 
 .feature {
   width: 80%;
   margin: auto;
-  border: 10px solid black;
   clear: both;
   margin-bottom: 2%;
 }
@@ -107,7 +100,9 @@ nav .cell {
   display: block;
   margin-left:auto;
   margin-right: auto;
-  border: 10px solid red;
+	animation-name: fade;
+	animation-duration: 10s;
+	animation-timing-function: ease-in;
 }
 
 /*COLUMNS BELOW FEATURE*/
