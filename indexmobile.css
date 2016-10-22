@@ -20,14 +20,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /*End of browser reset code */
 
+/*Code for intro sequence */
+
 body {
+    width: 100%;
+    height: auto;
+    ;
+    display: block;
     background-color: black;
 }
 
-p {
-    color: white;
-    text-align: center;
+h3 {
+    font-size: 2em;
     font-family: 'Open Sans Condensed', courier;
+    padding: 1em 1em 1em 0;
+    color: white;
 }
 
 
@@ -59,13 +66,6 @@ nav .cell:hover {
     background-color: #000;
 }
 
-h3 {
-    color: white;
-    text-decoration: overline;
-    font-size: 2em;
-    font-family: fantasy;
-}
-
 #mainNav ul * {
     list-style-type: none;
     margin: 0;
@@ -84,6 +84,73 @@ h1 {
     font-family: 'Open Sans Condensed', courier;
     margin: -0.5%;
     padding: 0;
+}
+
+
+/*FEATURE IMAGE*/
+
+@keyframes fadeFeature {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.25;
+    }
+    75% {
+        opacity: 0.66;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.feature {
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.feature img {
+    width: 100%;
+    display: block;
+    animation-name: fadeFeature;
+    animation-duration: 3s;
+    filter: grayscale(50%);
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.1;
+        font-size: 1em;
+    }
+    25% {
+        opacity: 0.25;
+        font-size: 1.8em;
+    }
+    50% {
+        opacity: 0.5;
+        font-size: 2em;
+    }
+    75% {
+        opacity: 0.75;
+        font-size: 2em;
+    }
+    100% {
+        opacity: 1;
+        font-size: 1em;
+    }
+}
+
+#welcome {
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    text-align: center;
+    animation-fill-mode: forwards;
+    font-family: 'Open Sans Condensed', courier, arial !important;
+    color: white;
 }
 
 @keyframes PCymru {
@@ -153,43 +220,53 @@ h1 {
 }
 
 
-/*END OF HEADER AREA*/
+/*FRONT PAGE NEWS */
 
-
-/*COLUMNS*/
-
-.column-1 {
-    width: 16%;
-    float: left;
-    display: inline;
-    margin-left: 1%;
-    margin-right: 1%;
-}
-
-.column-2 {
-    width: 50%;
-    float: left;
-    display: inline;
-    margin-right: 1%;
-}
-
-.column-4 {
-    width: 31%;
-    float: left;
-    display: inline;
-}
-
-.twitter-timeline {
-    width: 100%;
+.homeContent {
+    width: 80%;
+    display: block;
     margin: auto;
-    border: 0.2em solid blue;
 }
 
-article p { /*More specific than just p selector, want different settings for article text */
-    color: gray;
+
+.story {
+    width: 90%;
+    margin: 1%;
+    display: inline-block;
+    height: 25em;
+    overflow-x: scroll;
+}
+
+.description {
     text-align: justify;
-    font-family: 'Open Sans Condensed', courier;
-    padding-right: 2%;
+}
+
+.story a {
+    font-size: 2em;
+    text-align: left;
+    text-decoration: none;
+    color: brown;
+}
+
+.story th {
+    padding: 5%;
+    color: gray;
+}
+
+th img {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 5em;
+    overflow: hidden;
+}
+
+table * {
+    font-family: 'Open Sans Condensed';
+}
+
+table .name {
+    font-style: italic;
 }
 
 footer {
@@ -200,4 +277,10 @@ footer {
     margin-top: 2%;
     background-image: url('footer.jpg');
     filter: grayscale(100%);
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans Condensed', courier;
 }

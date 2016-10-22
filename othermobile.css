@@ -159,7 +159,7 @@ h1 {
 /*COLUMNS*/
 
 .column-1 {
-    width: 16%;
+    width: 90%;
     float: left;
     display: inline;
     margin-left: 1%;
@@ -167,14 +167,14 @@ h1 {
 }
 
 .column-2 {
-    width: 50%;
+    width: 90%;
     float: left;
     display: inline;
     margin-right: 1%;
 }
 
 .column-4 {
-    width: 31%;
+    width: 90%;
     float: left;
     display: inline;
 }
